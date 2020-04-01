@@ -5,11 +5,16 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "9.3.3",
+    "next-images": "^1.4.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-icons": "^3.9.0"
   }
 }
