@@ -31,8 +31,7 @@ return(
       <h1 className="text-center mt-5">
         {country.country}
       </h1>
-    
-    <h5 className="mt-4">Primeira ocorrência: {country.firstCase}</h5>
+
     <div className="row align-items-center justify-content-center mt-5">
         <div className="col-sm-12 col-md-12 mb-3">
           <h3 className="text-center">{country.cases} casos</h3>
