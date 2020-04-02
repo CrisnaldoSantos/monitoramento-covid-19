@@ -10,7 +10,9 @@ const Countries = ({countries})=>(
   <NavBar act1="" act2="active" act3=""/>
   <div className="container py-2">
     <Head>
-      <title>Covid-19</title>
+      <title>Moni. Covid-19 | Países</title>
+      <meta name="robots" content="index/follow"/>
+      <meta name="description" content="Monitoramento dos impactos do Covid-19 no mundo"/>
       <link rel="icon" href="/favicon.ico" />
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous"></link>
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossOrigin="anonymous"></script>
