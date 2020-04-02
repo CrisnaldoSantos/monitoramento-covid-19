@@ -1,13 +1,13 @@
-import Head from 'next/head'
+import React from'react';
 import fetch from 'isomorphic-unfetch'
-import Card from '../components/card'
 import NavBar from '../components/navbar';
-import MadicalImg from '../assets/medical.png';
+import CountryItem from '../components/country-item'
+import Head from 'next/head'
 
 
-const Home = (response) => (
-  <>
-  <NavBar act1="active" act2="" act3=""/>
+const Countries = ({countries})=>(
+<>
+  <NavBar act1="" act2="active" act3=""/>
   <div className="container py-2">
     <Head>
       <title>Covid-19</title>
@@ -20,22 +20,14 @@ const Home = (response) => (
     
     <main>
       <h1 className="text-center mt-5">
-        Resumo Global do Covid-19
+        Monitoramento do Covid-19 por países
       </h1>
-      <div className="row align-items-center justify-content-center">
-        <img src={MadicalImg} alt="medical" className="img-fluid w-50 " style={{width:'300px'}}/>
-      </div>
-
-      <div className="row align-items-center justify-content-center">
-        <div className="col-sm-12 col-md-4 mb-3">
-          <Card titulo="Total de casos" subtitulo={response.cases}/>
-        </div>
-        <div className="col-sm-12 col-md-4 mb-3">
-          <Card titulo="Casos Recuperados:" subtitulo={response.recovered}/>
-        </div>
-        <div className="col-sm-12 col-md-4 mb-3">
-          <Card titulo="Óbitos:" subtitulo={response.deaths}/>
-        </div>
+      <div className="row align-items-center justify-content-center py-5">
+        {countries.map(country=>(
+            <div className="col-sm-12 col-md-3 mb-3" key={country.country}>
+                <CountryItem titulo={country.country} subtitulo={country.cases}/>
+            </div>
+        ))}
       </div>
     </main>
   </div>
@@ -43,12 +35,13 @@ const Home = (response) => (
       Crisnaldo Carvalho Santos © 2020
   </footer>
 </>
-)
+);
 
-Home.getInitialProps = async () => {
-  const res = await fetch('https://coronavirus-19-api.herokuapp.com/all')
-  const response = await res.json()
-  return response;
-}
 
-export default Home
+Countries.getInitialProps = async () => {
+    const res = await fetch('https://coronavirus-19-api.herokuapp.com/countries')
+    const countries = await res.json()
+    return {countries};
+  }
+
+export default Countries;
