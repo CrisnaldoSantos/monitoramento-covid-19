@@ -61,8 +61,8 @@ return(
         </div>
     </div>
     <div className="row align-items-center justify-content-center">
-        <div className="col-sm-12 col-md-4 mb-5 mt-5">
-          <button onClick={returnPage} className="btn btn-dark btn-block">Voltar</button>
+        <div className="text-center col-sm-12 col-md-4 col-lg-12 mb-5 mt-4">
+          <button onClick={returnPage} className="btn btn-dark md-btn-block">Voltar</button>
         </div>
     </div>
 
