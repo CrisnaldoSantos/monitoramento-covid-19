@@ -11,6 +11,7 @@ const Home = (response) => (
   <div className="container py-2">
     <Head>
       <title>Moni. Covid-19 | Home</title>
+      <meta name="google-site-verification" content="ZUtOToq5nS86YZtI4y7k3cmwJcGJX_WwvRTV6iG6YQo" />
       <meta name="robots" content="index/follow"/>
       <meta name="description" content="Monitoramento dos impactos do Covid-19 no mundo"/>
       <link rel="icon" href="/favicon.ico" />
